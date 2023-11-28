@@ -11,16 +11,18 @@ class SubActivity : AppCompatActivity() {
     val binding by lazy{ ActivitySubBinding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
+
         setContentView(binding.root)
 
-//        if(intent.hasExtra("Data1"))
-//        {
-//        binding.tvGetmsg1.text = intent.getStringExtra("Data1")
-//        }
 
-        binding.tvGetmsg1.text = intent.getStringExtra("Data1")
-      //  binding.DataTextView2.setText("${intent.getIntExtra("Data2",0)}")
+       if(intent.hasExtra("msg"))
+       {
+
+       binding.tvGetmsg1.text = intent.getStringExtra("msg")
+
+        }
     }
 
 
