@@ -17,10 +17,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.tvTitle.setText("송드로이드 시작")
 
+        // Login 버튼
         binding.btnGetTest.setOnClickListener{
 
             // 토스트 메세지 설정
-            Toast.makeText(this@MainActivity,"화면이 전환 됩니다." , Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@MainActivity,"로그인 성공 메인화면 입니다." , Toast.LENGTH_SHORT).show()
 
 
             val intent = Intent(this, SubActivity::class.java)
@@ -33,5 +34,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+        // 회원가입 버튼
+        binding.btnRegister.setOnClickListener{
+            // 토스트 메세지 설정
+            Toast.makeText(this@MainActivity,"회원가입 페이지 입니다." , Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, ResActivity::class.java)
+            //          var result = binding.etId.text
+            //           binding.tvTitle.setText(result)
+            startActivity(intent)
+
+        }
+
     }
 }
