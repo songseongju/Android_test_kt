@@ -12,6 +12,13 @@ android {
         viewBinding = true
     }
 
+
+    dataBinding{
+
+        // 데이터 바인딩 활성화
+        enable = true
+    }
+
     defaultConfig {
         applicationId = "com.example.tetrisproject"
         minSdk = 24
